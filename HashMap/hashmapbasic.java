@@ -11,7 +11,6 @@ public class Main{
 	    map.put("india",150);
 	    map.put("china", 180);
 	    map.put("US", 100);
-	    
 	    //System.out.print(map);
 	    
 	   // System.out.println(map.get("china"));  // If key presents the it will prints the value
