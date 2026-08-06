@@ -1,5 +1,19 @@
-package Strings.basics.Sliding_window;
+class Solution {
+    public int lengthOfLongestSubstring(String s) {
 
-public class 02_ Longest_Substring_Without_Repeating_Characters {
-    
+        HashMap<Character,Integer> map = new HashMap<>();
+        int left =0;
+        int max = 0;
+        for(int i = 0; i < s.length(); i++){
+            char ch = s.charAt(i);
+            if(map.containsKey(ch)){
+                left = Math.max(left,map.get(ch)+1);
+            }
+           map.put(ch,i);
+           max = Math.max(max,i-left+1);
+
+        }
+        return max;
+    }
 }
+
